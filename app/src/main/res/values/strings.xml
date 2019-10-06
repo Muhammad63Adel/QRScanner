@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QrScanner</string>
+    <string name="title_activity_creat_qr">CreatQr</string>
+    <string name="title_activity_read_qr">ReadQr</string>
+</resources>

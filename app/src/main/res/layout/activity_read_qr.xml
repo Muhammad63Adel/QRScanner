@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadQR">
+
+    <Button
+        android:id="@+id/ReadBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Read QR code"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:onClick="Read" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet_read"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight = "55dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"/>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/show"
+                android:textSize="20sp"
+                android:text="scan agian"
+                android:layout_centerHorizontal="true"
+                android:onClick="Read"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
